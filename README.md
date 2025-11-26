@@ -22,6 +22,21 @@ cd matrix-mul-single
 mvn -q -DskipTests package
 mvn -q exec:java -Dexec.args="400 1"
 ```
+
+veya
+
+```sh
+cd matrix-mul-single
+mvn -q -DskipTests package
+java -cp target/matrix-mul-single-1.0-SNAPSHOT.jar com.example.single.SingleThreadBenchmarkApp 400 1
+```
+
+veya
+```sh
+cd matrix-mul-single
+mvn -q -DskipTests package
+mvn -q exec:exec -Dexec.executable="java" -Dexec.args="-cp target/classes com.example.single.SingleThreadBenchmarkApp 400 1"
+```
 ---
 
 ## Sınıf Hiyerarşisi
